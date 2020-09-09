@@ -1,10 +1,10 @@
 //Function expression to select elements
 const selectElement = (s) => document.querySelector(s)
 // Open the menu on click
-selectElement(s,'.open').addEventListener('click', () => {
-    selectElement(s,'.nav-list').classList.add(active);
+selectElement('.open').addEventListener('click', () => {
+    selectElement('.nav-list').classList.add(active);
 })
 //Close the menu on click
-selectElement(s,'.close').addEventListener('click', () => {
-    selectElement(s,'.nav-list').classList.remove(active);
+selectElement('.close').addEventListener('click', () => {
+    selectElement('.nav-list').classList.remove(active);
 })
