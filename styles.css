@@ -36,10 +36,6 @@ section {
     padding: 5rem 0;
 }
 
-body {
-    background-color: #3a3a77;
-}
-
 /* header  */
 header {
     width: 100%;
@@ -63,7 +59,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
-    border-bottom: 1px solid #ffffff33;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .nav-brand {
@@ -95,7 +91,7 @@ nav {
     transition: all 650ms ease-in-out;
 }
 
-.nav-list.active {
+.nav-list.active{
     right: 0;
 }   
 
@@ -136,7 +132,7 @@ nav {
 
 .main-message {
     width: 100%;
-    max-width: 50rem;
+    max-width: 80rem;
     color: #fafafa;
     text-transform: uppercase;
     transform: translateY(20%);
@@ -198,7 +194,7 @@ nav {
 .activities-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 2.5rem;
+    gap: 2.5rem;
 }
 
 .activities-grid-item {
@@ -221,7 +217,7 @@ nav {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%);
-    z-index: 1;
+    z-index: -1;
 }
 
 .star-gazing {
@@ -263,7 +259,7 @@ nav {
     left: 0;
     width: 100%;
     height: 4.7rem;
-    background: url("images/wave-small-reversed.png") center no-repeat;
+    background: url("images/wave-small-reversed.png") center no-repeat fixed;
     background-size: cover;
 }
 
@@ -271,26 +267,26 @@ nav {
     width: 100%;
     color: #fafafa;
     position: absolute;
-    top: 55%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.testimonials-text-box {
+.testimonial-text-box {
     padding: 0 1.5rem;
     margin-bottom: 2rem;
     position: relative;
 }
 
-.testimonials-text-box i {
+.testimonial-text-box i {
     position: absolute;
     top: -8rem;
     left: 50%;
     transform: translateX(-50%);
     font-size: 8rem;
     color: #eb648c;
-    opacity: .5;
+    opacity: 0.5;
     z-index: -1;
 }
 
@@ -305,7 +301,7 @@ nav {
 .adventure-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 2.5rem;
+    gap: 2.5rem;
     margin-bottom: 2rem;
 }
 
@@ -340,8 +336,8 @@ footer {
     }
 }
 
-@media screen and (min-width: 700px){
-    .header {
+@media screen and (min-width: 720px){
+    header {
         height: 8rem;
     }
 
@@ -349,7 +345,7 @@ footer {
         width: 3.5rem;
     }
 
-    .nav-link {
+    .nav-list {
         width: initial;
         height: initial;
         background-color: transparent;
@@ -369,7 +365,7 @@ footer {
     }
 
     .nav-link, 
-    .current {
+    .current{
         color: #fafafa;
         position: relative;
         font-size: 1.3rem;
@@ -398,11 +394,11 @@ footer {
     }
 
     .hero {
-        height: 60vh;
+        height: 70vh;
     }
 
     .main-message {
-        transform: translateY(50%);
+        transform: translateY(65%);
     }
 
     .title-heading h1 {
@@ -411,6 +407,10 @@ footer {
 }
 
 @media screen and (min-width: 950px){
+    .hero {
+        height: 75vh;
+    }
+    
     .hero::before{
         height: 22.7rem;
         background: url("/images/wave-large.png");
@@ -423,9 +423,13 @@ footer {
     }
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 1200px) {
     .hero{
-        height: 75vh;
+        height: 85vh;
+    }
+
+    .testimonials {
+        height: 85vh;
     }
 }
 
